@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Application météo</title>
+   <link href="./style.css" rel="stylesheet" type="text/css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+   <div id="app">
+      <h1>Application Météo</h1>
+      <div id="form-container">
+         <form id="city-form">
+            <input type="text" id="city-input" placeholder="Entrez une ville" required>
+            <button type="submit">Envoyer</button>
+         </form>
+         <div id="city-image-container">
+            <!-- L'image de la ville sera affichée ici -->
+         </div>
+      </div>
+
+      <div id="city-container" class="hidden">
+         <h2>Informations sur la ville</h2>
+         <table id="city-table" class="common-table">
+            <thead>
+               <tr>
+                  <th>Ville</th>
+                  <th>Pays</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+               </tr>
+            </thead>
+            <tbody>
+               <!-- Les lignes de données seront ajoutées ici dynamiquement -->
+            </tbody>
+         </table>
+      </div>
+
+      <div id="weather-result" class="hidden">
+         <h2 id="weather-title">Prévisions météorologiques</h2>
+         <table id="weather-table" class="common-table">
+            <thead>
+               <tr>
+                  <th>Date</th>
+                  <th>Temp. max (°C)</th>
+                  <th>Temp. min (°C)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <!-- Les lignes de données seront ajoutées ici dynamiquement -->
+            </tbody>
+         </table>
+      </div>
+
+      <div id="chart-container" class="hidden">
+         <h2>Graphique des températures</h2>
+         <canvas id="weather-chart" width="400" height="200"></canvas>
+      </div>
+
+      <!-- Popup modale pour l'image -->
+      <div id="image-modal" class="modal">
+         <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-image" src="" alt="Image de la ville">
+         </div>
+      </div>
+
+      <button id="scroll-to-top" class="hidden">↑ Retour en haut</button>
+   </div>
+   <script src="./script.js" defer></script>
+</body>
+
+</html>

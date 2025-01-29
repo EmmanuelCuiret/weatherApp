@@ -1,0 +1,27 @@
+{
+  "name": "gnt-verou-6-44-weather-app-emmanuelcuiret",
+  "version": "1.0.0",
+  "description": "- Repository: `weather-app` - Type of Challenge: `Learning` - Duration: `5 days` - Deployment strategy: `Github pages / Netlify` - Team challenge : `solo`",
+  "homepage": "https://github.com/Junior-dev-Track/gnt-verou-6-44-weather-app-EmmanuelCuiret#readme",
+  "bugs": {
+    "url": "https://github.com/Junior-dev-Track/gnt-verou-6-44-weather-app-EmmanuelCuiret/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junior-dev-Track/gnt-verou-6-44-weather-app-EmmanuelCuiret.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "chart.js": "^4.4.7",
+    "cors": "^2.8.5",
+    "nodemon": "^3.1.9"
+  }
+}
