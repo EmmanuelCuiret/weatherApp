@@ -41,7 +41,7 @@ document.getElementById('city-form').addEventListener('submit', async (event) =>
       tableBodyCity.innerHTML = 'Chargement...';
 
       //const geoResponse = await fetch(`http://localhost:3000/geocoding?name=${city}`);
-      const geoResponse = await fetch(`/.netlify/functions/geocoding?name=${city}`);
+      const geoResponse = await fetch(`./netlify/functions/geocoding?name=${city}`);
 
       const geoData = await geoResponse.json();
 
