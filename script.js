@@ -40,7 +40,9 @@ document.getElementById('city-form').addEventListener('submit', async (event) =>
       // Appel au serveur proxy
       tableBodyCity.innerHTML = 'Chargement...';
 
-      const geoResponse = await fetch(`http://localhost:3000/geocoding?name=${city}`);
+      //const geoResponse = await fetch(`http://localhost:3000/geocoding?name=${city}`);
+      const geoResponse = await fetch(`/.netlify/functions/geocoding?name=${city}`);
+
       const geoData = await geoResponse.json();
 
       if (geoData.results && geoData.results.length > 0) {
@@ -234,7 +236,7 @@ async function fetchCityImage(city, pays, accessKeySplash) {
    }
 };
 
-function displayCityImage(url,caption) {
+function displayCityImage(url, caption) {
    //Création de l'élément qui contient l'image
    const imgElement = document.createElement("img");
    imgElement.src = url;
